@@ -1,0 +1,3 @@
+@function ObjRet($object,$value){
+    @return map-get($object, $value);
+}

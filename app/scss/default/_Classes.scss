@@ -1,0 +1,821 @@
+.resp__btn {
+  @media (max-width: 991px) {
+    font-size: 12px !important;
+    height: 40px !important;
+    padding: 0 30px !important;
+    line-height: normal !important;
+  }
+  @media (max-width: 375px) {
+    padding: 0 22px !important;
+  }
+}
+.bg__properties {
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+}
+.slick-dots {
+  position: static !important;
+  padding-top: 80px;
+  @media (max-width: 991px) {
+    padding-top: 24px;
+  }
+  li {
+    height: unset;
+    width: unset;
+    margin-right: 12px;
+    button {
+      width: 30px !important;
+      height: 4px !important;
+      background: black !important;
+      opacity: 0.25;
+      padding: 0 !important;
+      &::before {
+        width: 0 !important;
+        height: 0 !important;
+        content: "" !important;
+      }
+    }
+    &.slick-active {
+      button {
+        background-color: ObjRet($colors, secondary-color) !important;
+        opacity: 1;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.resp__spacingM {
+  @media (max-width: 1199px) {
+    margin-bottom: 100px !important;
+    margin-top: 0px !important;
+  }
+  @media (max-width: 991px) {
+    margin-bottom: 55px !important;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 48px !important;
+  }
+}
+.resp__spacingP {
+  @media (max-width: 1199px) {
+    padding-top: 0 !important;
+    padding-bottom: 100px !important;
+  }
+  @media (max-width: 991px) {
+    padding-bottom: 55px !important;
+  }
+  @media (max-width: 767px) {
+    padding-bottom: 48px !important;
+  }
+}
+
+.font__primary {
+  @include defStyle(secondary-font, 46, 400, primary-color, 59);
+  text-transform: uppercase;
+  @media (max-width: 1199px) {
+    font-size: 35px !important;
+    line-height: 45px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px !important;
+    line-height: 31px !important;
+  }
+}
+.para__primary {
+  @include defStyle(third-font, 16, 400, para-color, 25.6);
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.para__secondary{
+  @include defStyle(third-font, 16, 400, para-secondary-color, 25.6);
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+.product_wrapper {
+  padding: 28px 0;
+  &:last-child {
+    margin-right: 0;
+  }
+  margin-right: 30px;
+}
+.product {
+  width: 285px;
+  background: linear-gradient(
+    133.05deg,
+    rgba(255, 83, 207, 0.31) 11.55%,
+    rgba(252, 140, 193, 0.18) 95.05%
+  );
+  border-radius: 8px;
+  box-shadow: 0px 2px 28px 4px #ffa2bc;
+  .img_box {
+    position: relative;
+  }
+  .sale__ribbon,
+  .sold__ribbon {
+    @include defStyle(third-font, 14, 900, third-color, 21);
+    text-transform: uppercase;
+    padding: 0 12px;
+    height: 23px;
+    background-color: ObjRet($colors, secondary-color);
+    position: absolute;
+    top: 16px;
+    left: 0;
+  }
+  .sold__ribbon {
+    background-color: ObjRet($colors, primary-color);
+  }
+  .wish__ribbon {
+    width: 24px;
+    height: 24px;
+    background-color: ObjRet($colors, third-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+  }
+  h3 {
+    @include defStyle(third-font, 18, 700, primary-color, 27);
+  }
+  .sale_price {
+    @include defStyle(third-font, 24, 700, secondary-color, 31);
+  }
+  .original_price {
+    @include defStyle(third-font, 18, 400, primary-color, 27);
+    text-decoration: line-through;
+  }
+  a {
+    text-decoration: none;
+  }
+  button {
+    @include btnStyle(
+      third-font,
+      11,
+      700,
+      third-color,
+      secondary-color,
+      253,
+      34,
+      4,
+      unset,
+      0.5
+    );
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    border: none;
+    transition: transform 0.25s;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+    img {
+      filter: invert(1);
+      width: 11px;
+    }
+  }
+}
+.max__width {
+  max-width: 1920px;
+  margin: auto;
+}
+.review__stars {
+  column-gap: 5px;
+  img {
+    width: 12px;
+  }
+}
+.btn__primary {
+  position: relative;
+  button {
+    @include btnStyle(
+      third-font,
+      16,
+      700,
+      third-color,
+      secondary-color,
+      155,
+      52,
+      4,
+      unset,
+      0.5
+    );
+    width: unset;
+    padding: 0 40px;
+    border: none;
+    background: linear-gradient(274.59deg, #f347cd 17.12%, #ef60a3 71.18%);
+    transition: transform 0.25s;
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+  .shadow,
+  .shadow__secondary {
+    width: 205px;
+    height: 32px;
+    background: linear-gradient(
+      274.59deg,
+      rgba(243, 71, 205, 0.7) 17.12%,
+      rgba(239, 96, 163, 0.7) 71.18%
+    );
+    display: inline-block;
+    filter: blur(7px);
+    z-index: -1;
+    position: relative;
+    bottom: 18px;
+    @media (max-width: 991px) {
+      width: 150px;
+      bottom: 24px;
+    }
+    @media (max-width: 375px) {
+      display: none;
+    }
+  }
+  .shadow__secondary {
+    left: 4.5%;
+    display: inline-block;
+    width: 205px;
+    @media (max-width: 991px) {
+      left: 2.5%;
+    }
+    @media (max-width: 767px) {
+      left: unset;
+    }
+  }
+}
+.secondary__main {
+  background: url("../images/bg_secondary.png");
+  background-size: cover;
+}
+._pagination {
+  .pagination {
+    align-items: center;
+    .page-item,
+    .page-link {
+      border: none !important;
+      background: none;
+      padding: 0;
+    }
+    .page-item {
+      margin-right: 20px;
+      &:first-child {
+        margin-right: 24px;
+      }
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-left: 24px;
+        margin-right: 0;
+      }
+      .page-link {
+        @include defStyle(third-font, 16, 700, primary-color, 25);
+        &:hover,
+        &:focus {
+          color: ObjRet($colors, secondary-color);
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+.review_model {
+  position: fixed;
+  top: 0;
+  background-color: #ef60a380;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  @media (max-height: 855px) {
+    align-items: flex-start;
+  }
+  #reviewForm_close_btn {
+    cursor: pointer;
+  }
+  form {
+    width: 486px;
+    height: fit-content;
+    background-color: ObjRet($colors, third-color);
+    border: 1px solid ObjRet($colors, bg-third);
+    border-radius: 4px;
+    padding: 28px 28px 48px 28px;
+    h1 {
+      @include defStyle(third-font, 28, 700, primary-color, 42);
+      text-transform: uppercase;
+    }
+
+    .inner {
+      padding: 0 20px;
+      input[type="submit"] {
+        @include btnStyle(
+          third-font,
+          14,
+          700,
+          third-color,
+          secondary-color,
+          400,
+          44,
+          4
+        );
+        width: 100%;
+        text-transform: uppercase;
+        border: none;
+        transition: transform 0.25s;
+        &:hover,
+        &:focus {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+.form_control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  &:nth-child(5) {
+    margin-bottom: 40px;
+  }
+  label {
+    @include defStyle(third-font, 14, 400, para-color, 21);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  input {
+    @include btnStyle(
+      third-font,
+      14,
+      400,
+      para-sixth-color,
+      third-color,
+      390,
+      44,
+      4
+    );
+    border: 1px solid ObjRet($colors, brdr-color);
+    width: 100%;
+    text-transform: uppercase;
+    padding: 0 16px;
+    &:focus {
+      outline-color: ObjRet($colors, secondary-color);
+    }
+    &::placeholder {
+      color: ObjRet($colors, para-sixth-color);
+    }
+  }
+  .dropdown {
+    button {
+      @include defStyle(third-font, 14, 400, para-sixth-color);
+      text-transform: uppercase;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid ObjRet($colors, brdr-color);
+      background-color: ObjRet($colors, third-color);
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .dropdown-menu {
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 0;
+      box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+        0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+        0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+        0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+      a {
+        @include defStyle(third-font, 14, 400, para-color, 21);
+        transition: background-color 0.25s;
+        &:focus,
+        &:hover {
+          background: ObjRet($colors, primary-color) !important;
+          color: ObjRet($colors, third-color) !important;
+        }
+      }
+      .dropdown-item {
+        padding-right: 20px;
+        padding-left: 20px;
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .dragArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 158px;
+    border: 1px dashed ObjRet($colors, brdr-color);
+    border-radius: 4px;
+    &.active {
+      border-style: solid;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+    }
+    .icon {
+      margin-bottom: 13px;
+    }
+    h4 {
+      @include defStyle(third-font, 12, 400, para-sixth-color);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    button {
+      @include btnStyle(
+        third-font,
+        12,
+        700,
+        secondary-color,
+        third-color,
+        143,
+        36,
+        4
+      );
+      text-transform: uppercase;
+      border: 1px solid ObjRet($colors, secondary-color);
+      transition: transform 0.25s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  textarea {
+    @include defStyle(third-font, 14, 400, para-sixth-color);
+    padding: 11px 16px;
+    width: 100%;
+    border: 1px solid ObjRet($colors, brdr-color);
+    border-radius: 4px;
+    height: 107px;
+    text-transform: uppercase;
+    resize: none;
+    &:focus {
+      outline-color: ObjRet($colors, secondary-color);
+    }
+  }
+  .inp_field {
+    position: relative;
+    input {
+      padding-left: 12px;
+      padding-right: 40px;
+    } 
+    svg {
+      position: absolute;
+      top: 16px;
+      right: 15px;
+      cursor: pointer;
+    }
+  }
+}
+.shopping_cartSide {
+  display: none;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  background-color: #ef60a380;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  .inner {
+    height: 100%;
+    background-color: white;
+    @media (max-height: 730px) {
+      height: fit-content;
+    }
+    .head {
+      padding: 32px 24px 24px 24px;
+      border-bottom: 1px solid ObjRet($colors, bg-third);
+      h1 {
+        @include defStyle(third-font, 20, 700, fourth-color, 26);
+        text-transform: uppercase;
+      }
+      img {
+        filter: invert(0.6);
+      }
+    }
+    li {
+      padding: 16px 24px;
+      display: flex;
+      border-bottom: 1px solid ObjRet($colors, bg-third);
+      .left {
+        margin-right: 16px;
+      }
+      .middle {
+        margin-right: 11px;
+        h2 {
+          @include defStyle(third-font, 14, 700, fourth-color, 21);
+          margin-bottom: 12px;
+          width: 168px;
+        }
+        input {
+          @include btnStyle(
+            third-font,
+            12,
+            400,
+            para-color,
+            third-color,
+            72,
+            36,
+            4
+          );
+          border: 1px solid ObjRet($colors, brdr-color);
+          padding: 0 12px;
+          margin-right: 16px;
+          &:focus {
+            outline-color: ObjRet($colors, secondary-color);
+          }
+        }
+        .text {
+          .sale_price {
+            @include defStyle(third-font, 16, 700, secondary-color, 25);
+          }
+          .original_price {
+            @include defStyle(third-font, 12, 400, para-secondary-color, 18);
+            text-decoration: line-through;
+          }
+        }
+        a {
+          @include defStyle(third-font, 12, 700, para-color, 36, 0.5);
+          text-decoration: none;
+          margin-top: 4px;
+          display: flex;
+          align-items: center;
+          img {
+            filter: brightness(0);
+            margin-left: 8px;
+            width: 14px;
+          }
+        }
+      }
+    }
+    ._footer {
+      margin-top: auto;
+      border-top: 1px solid ObjRet($colors, bg-third);
+      padding: 20px 26px 32px 26px;
+      h2 {
+        @include defStyle(third-font, 16, 400, para-secondary-color, 25);
+      }
+      h1 {
+        @include defStyle(third-font, 26, 700, fourth-color, 26);
+      }
+      a {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include btnStyle(
+            third-font,
+            16,
+            700,
+            third-color,
+            secondary-color,
+            304,
+            52,
+            4
+          );
+          width: 100%;
+          text-transform: uppercase;
+          border: none;
+          transition: transform 0.25s;
+          &:hover,
+          &:focus {
+            transform: scale(1.05);
+          }
+          img {
+            margin-right: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+.signIn_form,
+.signUp_form {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #ef60a380;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  @media (max-height: 640px) {
+    align-items:flex-start;
+  }
+  .inner {
+    width: 486px;
+    max-height: 665px;
+    background-color: ObjRet($colors, third-color);
+    border-radius: 4px;
+    box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+      0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+      0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+      0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+      @media (max-height: 640px) {
+        height: fit-content;
+      }
+    .head {
+      img {
+        filter: invert(0.6);
+      }
+    }
+    ._body {
+      padding: 0 48px;
+      @media(max-width: 375px){
+        padding:0 28px;
+      }
+      h1 {
+        @include defStyle(third-font, 28, 700, primary-color);
+        text-transform: uppercase;
+      }
+      p {
+        @include defStyle(third-font, 14, 400, para-secondary-color, 21);
+      }
+      .checkBox {
+        display:flex;
+        align-items: center;
+        input {
+          margin-right: 12px;
+          width:16px;
+          height:16px;
+        }
+        label {
+          @include defStyle(third-font, 14, 400, para-color, 21);
+        }
+      }
+      a {
+        @include defStyle(third-font, 14, 400, secondary-color, 21);
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      input[type="submit"] {
+        @include btnStyle(
+          third-font,
+          14,
+          700,
+          third-color,
+          secondary-color,
+          400,
+          44,
+          4
+        );
+        width: 100%;
+        text-transform: uppercase;
+        border: none;
+        transition: transform 0.25s;
+        &:hover,
+        &:focus {
+          transform: scale(1.05);
+        }
+      }
+      span {
+        @include defStyle(third-font, 14, 400, para-color, 21);
+      }
+    }
+    ._footer {
+      padding: 24px 48px 48px 48px;
+      border-top: 1px solid ObjRet($colors, brdr-color);
+      p {
+        @include defStyle(third-font, 14, 400, para-secondary-color, 21);
+      }
+      .social_icons {
+        display: flex;
+        justify-content: center;
+        column-gap: 12px;
+        .box {
+          width: 32px;
+          height: 32px;
+          border-radius: 4px;
+          background-color: #787a801f;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          transition: background-color 0.25s;
+          svg {
+            path {
+              fill: ObjRet($colors, para-secondary-color);
+            }
+          }
+          &:hover,
+          &:focus {
+            background-color: #ef60a31f;
+            svg {
+              path {
+                fill: ObjRet($colors, secondary-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.signUp_form{
+  @media(max-height:835px){
+    align-items: flex-start;
+  }
+  .inner{
+    max-height: 851px;
+  }
+}
+.contact_form{
+  display:flex;
+  flex-direction: column;
+  row-gap: 24px;
+  @media(max-width: 767px){
+    row-gap: 20px;
+  }
+  .outter{
+    column-gap: 30px;
+    @media(max-width: 767px){
+     flex-direction: column;
+     row-gap: 20px;
+    }
+  }
+  .form_control2{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    label{
+      @include defStyle(third-font,16,400,primary-color,25);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    input,textarea{
+      @include btnStyle(third-font,16,400,para-sixth-color,third-color,600,52,4);
+      width:100%;
+      border:1px solid ObjRet($colors,secondary-color);
+      text-transform: uppercase;
+      outline-width: 0;
+      padding:0 16px;
+      &::placeholder{
+        color:ObjRet($colors,par-sixth-color);
+      }
+    }
+    textarea{
+      padding:13px 16px;
+      height:130px;
+      resize:none;
+      margin-bottom: 24px;
+      @media(max-width: 767px){
+        margin-bottom: 16px;
+      }
+    }
+  }
+  input[type="submit"]{
+    @include btnStyle(third-font,16,700,third-color,secondary-color,206,52,4,unset.0.5);
+    border:none;
+    text-transform: uppercase;
+    transition:transform .25s;
+    &:hover,
+    &:focus{
+      transform:scale(1.05);
+    }
+  }
+}
+._pointer{
+  cursor: pointer;
+}
+.text_decoration{
+  &:hover,
+  &:focus{
+    text-decoration: none;
+  }
+}
+input[type=number]::-webkit-inner-spin-button {
+  opacity: 1
+}

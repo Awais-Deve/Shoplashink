@@ -1,0 +1,35 @@
+.productCarousel_btns {
+  img {
+    width: 45px;
+    cursor: pointer;
+  }
+  @media(max-width: 767px){
+    display: none;
+  }
+}
+.productPage_carousel_one {
+  margin-bottom: 90px;
+}
+.productPage_carousel_two {
+  padding: 90px 0;
+  background: url("../images/trans_bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 991px) {
+    padding: 55px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 48px 0;
+  }
+}
+.productPage_carousel_three {
+  margin-top: 90px;
+  padding-bottom: 180px;
+  @media (max-width: 991px) {
+    margin-top: 55px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 48px;
+  }
+}

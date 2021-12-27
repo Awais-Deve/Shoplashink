@@ -1,0 +1,61 @@
+.filter_bar {
+  padding-top: 68px;
+  padding-bottom: 52px;
+  @media(max-width: 767px){
+      padding:48px;
+  }
+  h3 {
+    @include defStyle(third-font, 16, 900, primary-color, 25);
+    text-transform: uppercase;
+  }
+  .dropdown {
+    button {
+      @include defStyle(third-font, 14, 700, secondary-color, 21);
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 1px solid ObjRet($colors, secondary-color);
+      column-gap: 60px !important;
+      outline: none;
+      box-shadow: none;
+      padding:11px 16px;
+    }
+    .dropdown-menu {
+      padding: 12px 0;
+      border-radius: 0;
+      box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+        0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+        0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+        0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+      a {
+        @include defStyle(third-font, 14, 400, para-color, 21);
+        transition: background-color 0.25s;
+        &:focus,
+        &:hover {
+          background: ObjRet($colors, primary-color) !important;
+          color: ObjRet($colors, third-color) !important;
+        }
+      }
+      .dropdown-item {
+        padding-right: 20px;
+        padding-left: 20px;
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+  input[type="number"]{
+      @include btnStyle(third-font,14,700,secondary-color,para-fourth-color,80,44,4,21);
+      border:1px solid ObjRet($colors, secondary-color);
+      padding:0 16px;
+      &:focus{
+        outline: none;
+      }
+      &::placeholder{
+          color:ObjRet($colors,secondary-color);
+      }
+  }
+  span{
+      @include defStyle(third-font,14,400,secondary-color,21);
+  }
+
+}

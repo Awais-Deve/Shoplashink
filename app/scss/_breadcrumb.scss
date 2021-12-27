@@ -1,0 +1,48 @@
+.breadcrumb {
+  margin-bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(239, 96, 163, 0.151698) 3%,
+    rgba(239, 96, 163, 0.300158) 31%,
+    rgba(239, 96, 163, 0.152931) 65%
+  );
+  padding: 19px 0;
+  @media (max-width: 375px) {
+    background: linear-gradient(
+      90deg,
+      rgba(239, 96, 163, 0.151698) 74%,
+      rgba(239, 96, 163, 0.300158) 0%,
+      rgba(239, 96, 163, 0.152931) 65%
+    );
+    padding: 11px 0;
+  }
+  .main_text {
+    .next {
+      filter: invert(0.7);
+      transform: rotate(180deg);
+      padding-left: 12px;
+      width: 18px;
+    }
+    a {
+      padding-right: 14px;
+      text-decoration: none;
+      img {
+        filter: invert(0.3);
+        width: 15px;
+      }
+      span{
+        color:ObjRet($colors,para-color);
+      }
+      &:hover,
+      &:focus{
+        span{
+          color:ObjRet($colors,secondary-color);
+        }
+      }
+    }
+    span {
+      @include defStyle(third-font, 14, 400, primary-color, 21);
+      text-transform: uppercase;
+    }
+  }
+}

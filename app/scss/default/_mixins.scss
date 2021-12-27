@@ -1,0 +1,28 @@
+@mixin defStyle($font,$size,$weight,$color,$lineHeight:unset,$letterSpacing:unset) {
+    font-family: ObjRet($familys,$font);
+    font-size : $size+px;
+    font-weight: $weight;
+    color: ObjRet($colors,$color);
+    @if($lineHeight != unset){
+        line-height: $lineHeight+px;
+    }
+    @if($letterSpacing != unset){
+        letter-spacing: $letterSpacing+px;
+    }
+}
+@mixin btnStyle($font,$size,$weight,$color,$bg,$width,$height,$radius,$lineHeight:unset,$letterSpacing:unset){
+    font-family: ObjRet($familys,$font);
+    font-size : $size+px;
+    font-weight: $weight;
+    color: ObjRet($colors,$color);
+    background-color: ObjRet($colors,$bg); 
+    width:$width+px;
+    height: $height+px;
+    border-radius: $radius+px;
+    @if($lineHeight != unset){
+        line-height: $lineHeight+px;
+    }
+    @if($letterSpacing != unset){
+        letter-spacing: $letterSpacing+px;
+    }
+}

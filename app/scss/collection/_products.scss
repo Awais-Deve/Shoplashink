@@ -1,0 +1,12 @@
+.collectionPage_products{
+    padding-bottom: 120px;
+    .product_wrapper{
+        margin-right: 0;
+    }
+    ._pagination{
+        margin-top: 62px;
+        @media(max-width:767px){
+            margin-top: 20px;
+        }
+    }
+}

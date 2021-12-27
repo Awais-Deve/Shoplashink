@@ -1,0 +1,277 @@
+footer {
+  background: url("../images/footer.png");
+  background-size: cover;
+  @media (max-width: 400px) {
+    display: none;
+  }
+  .container {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 70px;
+    @media (max-width: 1199px) {
+      padding-top: 120px;
+    }
+    @media (max-width: 991px) {
+      padding-bottom: 55px;
+    }
+    @media (max-width: 767px) {
+      padding-bottom: 48px;
+    }
+  }
+  .main_text {
+    a {
+      @include defStyle(third-font, 24, 700, bg-primary, 36);
+      text-decoration: none;
+      margin-bottom: 8px;
+      display: inline-block;
+      transition: transform 0.25s;
+      &:hover,
+      &:focus {
+        transform: scale(1.1);
+      }
+      @media (max-width: 767px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+    li {
+      &:last-child {
+        a {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &:first-child {
+      padding-left: 40px;
+      @media (max-width: 1850px) {
+        padding-left: 12px;
+      }
+      a {
+        text-transform: uppercase;
+      }
+    }
+    &:nth-child(2) {
+      a {
+        text-transform: capitalize;
+      }
+    }
+  }
+  .newsletter {
+    h1 {
+      @include defStyle(third-font, 36, 900, bg-primary, 54);
+      text-transform: uppercase;
+      @media (max-width: 767px) {
+        font-size: 24px;
+        line-height: 31px;
+      }
+    }
+    h2 {
+      @include defStyle(third-font, 24, 700, fifth-color, 40);
+      padding-right: 33px;
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 35px;
+      }
+    }
+    .inp_field {
+      position: relative;
+      width: 500px;
+      @media (max-width: 1199px) {
+        width: 100%;
+        display: flex;
+      }
+      @media (max-width: 991px) {
+        width: 500px;
+      }
+      @media (max-width: 520px) {
+        width: 100%;
+      }
+      input[type="email"] {
+        @include btnStyle(
+          third-font,
+          16,
+          400,
+          bg-primary,
+          third-color,
+          320,
+          52,
+          4,
+          23
+        );
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 0 24px;
+        border: 1px solid ObjRet($colors, bg-primary);
+        border-right-width: 0;
+        &::placeholder {
+          color: ObjRet($colors, bg-primary);
+        }
+        &:focus {
+          outline: none;
+        }
+        @media (max-width: 1199px) {
+          flex: 68%;
+        }
+      }
+      input[type="submit"] {
+        @include btnStyle(
+          third-font,
+          16,
+          400,
+          third-color,
+          bg-primary,
+          180,
+          52,
+          4,
+          25
+        );
+        border: none;
+        position: absolute;
+        right: 2px;
+        transition: transform 0.25s;
+        &:hover,
+        &:focus {
+          transform: scale(1.1);
+        }
+        @media (max-width: 1199px) {
+          flex: 30px;
+        }
+      }
+    }
+    .social_icons {
+      .icon_box {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: ObjRet($colors, bg-primary);
+        color: ObjRet($colors, third-color);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.25s;
+        margin-right: 12px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:focus,
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .img_1,
+  .img_2 {
+    position: absolute;
+    @media (max-width: 1850px) {
+      display: none;
+    }
+  }
+  .img_1 {
+    top: 84px;
+    left: -90px;
+  }
+  .img_2 {
+    top: 134px;
+    right: -211px;
+  }
+}
+.footer_bar {
+  background-color: ObjRet($colors, third-color);
+  display: none;
+  position: relative;
+  @media (max-width: 400px) {
+    display: block;
+  }
+  .copyright_bar {
+    background-color: ObjRet($colors, primary-color);
+    @include defStyle(third-font, 12, 400, third-color, 18);
+    span {
+      color: ObjRet($colors, bg-primary);
+      font-weight: 700;
+    }
+  }
+  ._navbar {
+    padding: 9px 16px 6px 16px;
+    ._nav {
+      a {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 30px;
+        text-decoration: none;
+        &:last-child {
+          margin-right: 0;
+        }
+        img {
+          margin-bottom: 5px;
+        }
+        span {
+          @include defStyle(third-font, 12, 400, primary-color, 18px);
+          text-transform: uppercase;
+        }
+      }
+    }
+    button {
+      font-size: 12px;
+      padding: 0 12px;
+      height: 32px;
+    }
+    ._div {
+      height: 0;
+    }
+    .shadow {
+      width: 110px;
+      bottom: 28px;
+    }
+  }
+  .res_searchBar {
+    position: absolute;
+    width: 100%;
+    top: 3%;
+    left: 102%;
+    transition: left 0.25s;
+    .inner {
+      width: 100%;
+      position: relative;
+    }
+    input {
+      @include btnStyle(
+        third-font,
+        12,
+        400,
+        para-third-color,
+        third-color,
+        375,
+        44,
+        0
+      );
+      box-shadow: 0px -1px 12px rgba(0, 0, 0, 0.25);
+      border: none;
+      width: 100%;
+      padding: 0 57px;
+      &:focus {
+        outline-color: ObjRet($colors, bg-primary);
+      }
+    }
+    a {
+      position: absolute;
+      &:first-child {
+        left: 17px;
+        top: 11px;
+      }
+      &:last-child {
+        right: 21px;
+        top: 15px;
+      }
+    }
+  }
+}
+
+.copyright_bar {
+  background-color: ObjRet($colors, primary-color);
+  @include defStyle(third-font, 12, 400, third-color, 18);
+  span {
+    color: ObjRet($colors, bg-primary);
+    font-weight: 700;
+  }
+}

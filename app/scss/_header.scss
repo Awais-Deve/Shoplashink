@@ -1,0 +1,249 @@
+.header {
+  .topBar {
+    background-color: ObjRet($colors, primary-color);
+    a,
+    span,
+    button,
+    button::after {
+      @include defStyle(third-font, 14, 400, third-color, 21);
+      text-decoration: none;
+      opacity: 0.6;
+    }
+    a:hover,
+    a:focus {
+      opacity: 1;
+    }
+    .left {
+      column-gap: 32px;
+      @media (max-width: 475px) {
+        column-gap: 16px;
+      }
+    }
+    .right {
+      column-gap: 74px;
+      @media (max-width: 475px) {
+        column-gap: 16px;
+      }
+      .dropdown {
+        button {
+          background-color: unset;
+          border: none;
+          word-spacing: 3px;
+          &::after {
+            vertical-align: middle;
+          }
+        }
+        .dropdown-menu {
+          border-radius: 0;
+          box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+            0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+            0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+            0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+          a {
+            color: ObjRet($colors, para-color);
+            opacity: 1;
+            transition: background-color 0.25s;
+            &:focus,
+            &:hover {
+              background: ObjRet($colors, primary-color) !important;
+              color: ObjRet($colors, third-color) !important;
+            }
+          }
+          transform: translate(0px, 38px) !important;
+        }
+      }
+      .user {
+        img {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  .head {
+    .logo {
+      img {
+        @media (max-width: 395px) {
+          width: 100%;
+        }
+      }
+    }
+    .main_text {
+      .text {
+        background: ObjRet($colors, bg-secondary);
+        height: 44px;
+        padding-left: 40px;
+        @media (max-width: 991px) {
+          padding-left: 12px;
+        }
+        a,
+        .count span {
+          @include defStyle(third-font, 14, 700, primary-color, 22.4);
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        .count {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: ObjRet($colors, bg-primary);
+          span {
+            color: ObjRet($colors, third-color);
+          }
+        }
+      }
+    }
+    .navbar-toggler {
+      &:focus {
+        outline: 1px solid ObjRet($colors, secondary-color);
+        box-shadow: none;
+      }
+    }
+  }
+  nav {
+    background-color: ObjRet($colors, bg-secondary);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 243, 243, 1) 71%,
+      rgba(235, 135, 163, 1) 60%
+    );
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: 1920px) {
+      background-size: unset;
+    }
+    @media (max-width: 1200px) {
+      background-image: none;
+    }
+    .navbar-nav {
+      column-gap: 40px;
+    }
+    .nav-item {
+      @media (max-width: 767px) {
+        margin-bottom: 16px;
+        &:first-child {
+          padding-top: 12px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 12px;
+        }
+      }
+    }
+    .nav-link {
+      @include defStyle(third-font, 16, 900, para-color, 25);
+      padding: 0;
+      text-transform: uppercase;
+      &:hover,
+      &:focus {
+        color: ObjRet($colors, bg-primary);
+      }
+      @media (max-width: 991px) {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    .inp_field {
+      position: relative;
+      input[type="text"] {
+        @include btnStyle(
+          third-font,
+          14,
+          400,
+          third-color,
+          primary-color,
+          360,
+          44,
+          4,
+          21
+        );
+        padding-left: 16px;
+        padding-right: 40px;
+        border: none;
+        &::placeholder {
+          color: ObjRet($colors, third-color);
+        }
+      }
+      button {
+        position: absolute;
+        right: 14px;
+        background: transparent;
+        border: none;
+        padding: 0;
+        height: 100%;
+      }
+    }
+    .count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: ObjRet($colors, bg-primary);
+      span {
+        font-size: 14px;
+        font-family: ObjRet($familys, third-font);
+        color: ObjRet($colors, third-color);
+      }
+    }
+    .dropdown-menu {
+      padding: 12px 0;
+      border-radius: 0;
+      box-shadow: 0px 60px 80px -20px rgba(30, 33, 44, 0.16),
+        0px 26px 24px -10px rgba(30, 33, 44, 0.1),
+        0px 12px 10px -6px rgba(30, 33, 44, 0.08),
+        0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+      a {
+        @include defStyle(third-font, 14, 400, para-color, 21);
+        transition: background-color 0.25s;
+        &:focus,
+        &:hover {
+          background: ObjRet($colors, primary-color) !important;
+          color: ObjRet($colors, third-color) !important;
+        }
+      }
+      .dropdown-item {
+        padding-right: 20px;
+        padding-left: 20px;
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.res_saleBar{
+  background-color: ObjRet($colors,bg-primary);
+  padding:8px 0;
+  display:none;
+  @media(max-width: 375px){
+    display:flex;
+  }
+  #res_saleBar_slides{
+    width: 220px;
+  }
+  img{
+    display:inline-block;
+    &:first-child{
+      margin-right: 17px;
+    }
+    &:last-child{
+      margin-left: 17px;
+      transform:rotate(180deg);
+    }
+  }
+  .info{
+    strong,a{
+      @include defStyle(third-font,12,900,third-color,18);
+    }
+    a{
+      margin-left: 4px;
+      font-weight: 400;
+    }
+  }
+}
